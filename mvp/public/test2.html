@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>C"MON</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script type="text/javascript">
+$(function() {
+    var drawImageOnCanvas = function(image, canvas, position) {
+        var context = canvas.getContext("2d");
+        context.drawImage(image, position.x, position.y);
+    };
+    jQuery.fn.percentageSliderInfographic = function() {
+        $.each(this, function(i, domNode) {
+            var node = $(this);
+            var start = [node.data("min-x"), node.data("min-y")];
+            var end = [node.data("max-x"), node.data("max-y")];
+            var percentage = node.data("percent");
+            var position = {
+                x: start[0] + (end[0] - start[0]) * percentage,
+                y: start[1] + (end[1] - start[1]) * percentage
+            };
+            $("#LOG").append(position.x + "," + position.y);
+            var src = node.data("imgsrc");
+            var canvas = $("#" + node.data("canvas-id"))[0];
+            var image = new Image();
+            image.src = node.data("imgsrc");
+            image.onload = function() {
+                drawImageOnCanvas(this, canvas, position);
+            };
+        });
+    };
+    var canvas = $("#mycanvas")[0];
+    var context = canvas.getContext("2d");
+    var image = new Image();
+    image.src = "rock-band.png";
+    image.onload = function() {
+        drawImageOnCanvas(this, canvas, {
+            x: 0,
+            y: 0
+        });
+        $(".mic").percentageSliderInfographic();
+    };
+});
+</script>
+</head>
+<body>
+  <canvas id="mycanvas" width="600" height="600">
+  </canvas>
+  <div class="mic" data-min-x="-10" data-min-y="390" data-max-x="55" data-max-y="140" data-percent=".3" data-imgsrc="mic.png" data-canvas-id="mycanvas"></div>
+  <div class="mic" data-min-x="100" data-min-y="390" data-max-x="126" data-max-y="140" data-percent="0" data-imgsrc="mic.png" data-canvas-id="mycanvas"></div>
+  <div class="mic" data-min-x="200" data-min-y="390" data-max-x="205" data-max-y="140" data-percent="1" data-imgsrc="mic.png" data-canvas-id="mycanvas"></div>
+  <div class="mic" data-min-x="305" data-min-y="390" data-max-x="280" data-max-y="140" data-percent=".65" data-imgsrc="mic.png" data-canvas-id="mycanvas"></div>
+  <div class="mic" data-min-x="420" data-min-y="390" data-max-x="355" data-max-y="140" data-percent=".25" data-imgsrc="mic.png" data-canvas-id="mycanvas"></div>
+  <div id="LOG"></div>
+</body>
+</html>

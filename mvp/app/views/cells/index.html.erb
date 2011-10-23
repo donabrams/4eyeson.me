@@ -1,0 +1,27 @@
+<h1>Listing cells</h1>
+
+<table>
+  <tr>
+    <th>Row</th>
+    <th>Col</th>
+    <th>Contents</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @cells.each do |cell| %>
+  <tr>
+    <td><%= cell.row %></td>
+    <td><%= cell.col %></td>
+    <td><%= cell.contents %></td>
+    <td><%= link_to 'Show', cell %></td>
+    <td><%= link_to 'Edit', edit_cell_path(cell) %></td>
+    <td><%= link_to 'Destroy', cell, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Cell', new_cell_path %>

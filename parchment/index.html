@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Enter keywords here." />
+<meta name="description" content="Enter brief description here." />
+
+<title>BusinessName</title>
+
+<link href="assets/css/main.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="assets/js/jquery-1.2.6.min.js"></script>
+
+<script type="text/javascript">
+
+// Simple jQuery Slideshow Script
+// Released by Jon Raasch (jonraasch.com)
+
+function slideSwitch() {
+    var $active = $('#slideshow img.active');
+
+    if ( $active.length == 0 ) $active = $('#slideshow img:last');
+
+    // use this to pull the images in the order they appear in the markup
+    var $next =  $active.next().length ? $active.next()
+        : $('#slideshow img:first');
+
+    // uncomment the 3 lines below to pull the images in random order
+    
+    // var $sibs  = $active.siblings();
+    // var rndNum = Math.floor(Math.random() * $sibs.length );
+    // var $next  = $( $sibs[ rndNum ] );
+
+
+    $active.addClass('last-active');
+
+    $next.css({opacity: 0.0})
+        .addClass('active')
+        .animate({opacity: 1.0}, 1000, function() {
+            $active.removeClass('active last-active');
+        });
+}
+
+$(function() {
+    setInterval( "slideSwitch()", 3000 );
+});
+
+</script>
+
+
+</head>
+
+<body>
+
+<div class="container-top">
+<div class="padding">
+    
+    <!--logo-->
+    <div class="logo">
+   	  <h1 class="hide">BusinessName</h1>
+    </div>
+    
+    <!--global/top navigation-->
+    <div class="global-nav">
+        <ul>
+            <li><a href="index.html" class="current">Home</a></li>
+            <li><a href="2.html">About</a></li>
+            <li><a href="3.html">Services</a></li>
+            <li><a href="4.html">Contact</a></li>
+        </ul>
+    </div>
+</div>
+</div>
+
+
+
+<!--BODY REGION-->
+<div class="container-body">
+
+    <!--jQuery slideshow-->
+    <div id="slideshow">
+        <img src="assets/images/sample-banner1.jpg" alt="banner" class="active" />
+        <img src="assets/images/sample-banner2.jpg" alt="banner" />
+        <img src="assets/images/sample-banner3.jpg" alt="banner" />
+    </div>
+
+
+<div class="padding">
+    
+	<!--about group-->
+    <div class="home-column">
+      <div class="page-flip page-flip-home">
+        <h3 class="box-title">Who We Are    (H3)</h3>
+            <p><span class="large-text">This Is text which has been emphasized with the &quot;large-text&quot; class. </span></p>
+        <p>Nunc auctor, est a scelerisque vehicula, tortor nulla imperdiet elit. Cras ut mi eu ante ultrices sagittis. Vestibulum eros velit, tristique eget rhoncus quis, congue quis leo praesent convallis. </p>
+            <p>Aenean pretium tellus  sit amet enim. Donec laoreet urna ut pede. Nulla eget magna at felis feugiat imperdiet.</p></div>
+    </div>
+    
+    <!--services group-->
+    <div class="home-column">
+      <div class="page-flip page-flip-home">
+        <h3 class="box-title">How We Can Help (H3)</h3>
+        <ul class="line">
+            <li>
+            <img src="assets/images/sample-thumb1.jpg" alt="photo" width="70" height="70" class="left" />
+            <h4><a href="#">Service Heading (H4)</a></h4>
+          Sunc auctor, est a scelerisque vehicula, tortor nulla imperdiet elit,  eu tincidunt ligula.</li>
+            <li><img src="assets/images/sample-thumb2.jpg" alt="photo" width="70" height="70" class="left" />
+              <h4><a href="#">Service Heading (H4)</a></h4>
+Sunc auctor, est a scelerisque vehicula, tortor nulla imperdiet elit,  eu tincidunt ligula.</li>
+            <li class="last"><img src="assets/images/sample-thumb3.jpg" alt="photo" width="70" height="70" class="left" />
+              <h4><a href="#">Service Heading (H4)</a></h4>
+Sunc auctor, est a scelerisque vehicula, tortor nulla imperdiet elit,  eu tincidunt ligula.</li></ul></div>
+    </div>
+    
+    <!--news group-->
+    <div class="home-column nudge">
+        <div class="page-flip page-flip-home">
+            
+        <h3 class="box-title">Upcoming Events   (H3)</h3>
+        
+        <ul class="line">
+        
+        <!--news item-->
+        <li>
+            
+            <div class="news-date">
+            <span class="month">May</span><br />
+            <span class="day">01</span><br />
+            <span class="year">2010</span>
+            </div>
+            
+            <div class="news-item">
+            <h4><a href="#">Event  Item Heading (H4)</a></h4>
+            Nulla luctus. Aenean pretium. tellus  sit amet enim.
+            </div>
+            
+            <div class="clear"></div>
+        
+        </li>
+        
+        <!--news item-->
+        <li>
+        
+        <div class="news-date">
+        <span class="month">May</span><br />
+        <span class="day">16</span><br />
+        <span class="year">2010</span>
+        </div>
+        
+        <div class="news-item">
+        <h4><a href="#">Event  Item Heading (H4)</a></h4>
+        Nulla luctus. Aenean pretium. tellus  sit amet enim.</div>
+        
+        <div class="clear"></div>
+        
+        </li>
+        
+        <!--news item-->
+        <li>
+        <div class="news-date">
+        <span class="month">Apr</span><br />
+        <span class="day">29</span><br />
+        <span class="year">2010</span>
+        </div>
+        
+        <div class="news-item">
+        <h4><a href="#">Event  Item Heading (H4)</a></h4>
+        Nulla luctus. Aenean pretium. tellus  sit amet enim.</div>
+        
+        <div class="clear"></div>
+        
+        </li>
+        <li class="last">
+        <div class="news-date"> <span class="month">Apr</span><br />
+        <span class="day">08</span><br />
+        <span class="year">2010</span> </div>
+        <div class="news-item">
+        <h4><a href="#">Event  Item Heading (H4)</a></h4>
+        Nulla luctus. Aenean pretium. tellus  sit amet enim.</div>
+        <div class="clear"></div></li></ul></div>
+        </div>
+        
+        <div class="clear"></div>
+    
+</div>
+</div>
+
+<!--FOOT REGION-->
+<div class="container-foot">
+  <div class="padding">
+    <div class="info">
+      <h3>BusinessName</h3>
+      <p> 589 W 1st Street<br />
+        Boiling Springs, PA 17007</p>
+      <strong>Phone:</strong> (888) 555-5555<br />
+      <strong>Fax:</strong> (888) 555-5555</div>
+    <div class="links">
+      <ul class="foot">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="2.html">About</a></li>
+        <li><a href="2.html">Services</a></li>
+        <li><a href="4.html">Contact</a></li>
+        <li><a href="http://validator.w3.org/check/referer" title="Check the validity of this pages’s XHTML">XHTML</a></li>
+        <li><a href="http://jigsaw.w3.org/css-validator/check/referer" title="Check the validity of this page’s CSS" >CSS</a></li>
+        <li><a href="http://www.thewebprojects.com" title="Web Design by Chris Falkenstein at theWebProjects.com">tWP</a></li>
+      </ul>
+  &copy; 2010 BusinessName. All rights reserved. </div>
+    <div class="clear"></div>
+  </div>
+</div>
+</body>
+</html>

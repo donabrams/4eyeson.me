@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  row: 1
+  col: 1
+  contents: MyString
+
+two:
+  row: 1
+  col: 1
+  contents: MyString

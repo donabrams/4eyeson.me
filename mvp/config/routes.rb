@@ -1,4 +1,8 @@
 Mvp::Application.routes.draw do
+  resources :notes
+
+  resources :columns
+
   resources :cells
 
   resources :students

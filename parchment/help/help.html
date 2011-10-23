@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>tWP Parchment Template - Help</title>
+<link href="../assets/css/help.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div class="container">
+  <div class="padding">
+    <h1>Parchment HTML Template Help </h1>
+    <h2>Overview</h2>
+    <p>Thanks for your interest in the <em>Parchment</em> HTML template. This document will help you understand how to customize  the<em> </em>template  to suit your own needs. The following content   outlines the most common tasks that you might want to perform in order to  make the <em>Parchment</em> template your own. Please note that this document assumes that you already have HTML and CSS know-how.  </p>
+    <h2>File Structure</h2>
+    <p>The <em>Parchment </em>HTML template has a simple file structure that allows the author to quickly  find the template's assets. On the root of the web site all the HTML files can be found. Also on the root there's a folder called &quot;assets&quot;. Within &quot;assets&quot;  there are two more folders labeled &quot;css&quot; and  &quot;images&quot; . In the &quot;css&quot; folder you'll find &quot;main.css&quot;. &quot;main.css&quot; contains all the styles for the template. In the &quot;images&quot; folder you'll find all the images used in the template. Another  folder which is located on the root of the web site is labeled  &quot;offline&quot;. Any file that has anything to do with the creation of the template, but is not meant to be uploaded to the server can be found in &quot;offline&quot;. For example, the Photoshop file labeled &quot;twp-parchment.psd&quot; is in the &quot;offline&quot; folder. Finally a folder labeled &quot;help&quot; can be found on the web site root. The &quot;help&quot; folder contains all the materials for this help file. </p>
+    <h2> Logo</h2>
+    <p>The template can be adjusted to accommodate the size of any logo, but logos that are wide (opposed to tall) are preferred from an aesthetic point of view. After you have prepared you logo, name it &quot;logo.gif&quot; and save it into the &quot;assets/images&quot; folder. If you need to save your logo as a JPEG than you will need to change the source of the logo image within the &quot;.logo&quot; class. The preferred maxium dimensions of your logo are 440 by 90 pixels. The logo dimension are set in the &quot;.logo&quot; class, but do not need to be adjusted unless your logo is larger than 440 by 90 pixels.</p>
+    <p>Once your logo  is in place you should edit the text within the &lt;H1&gt;tag. Applying the  &lt;H1&gt; tag to your business name allows search engines to easily index your site and identify your brand. The &lt;H1&gt; tag has the &quot;.hide&quot; class applied to it so it does not overlap your logo graphic. </p>
+    <h2>Global  Navigation</h2>
+    <p>Global  navigation items can be  added, modified or removed to suit your site map. The global navigation is a unordered list of text links. The unordered list is contained with a DIV that  has the  &quot;.global-nav&quot; class applied to it. You can simply add, modify or remove the text links within the &lt;li&gt;   tags. </p>
+    <p>The upstate and rollover state for the global navigation are controlled by CSS. To customize the global navigation link's upstate edit the &quot;.global-nav a&quot; selector. To customize the rollover state edit the &quot;.global-nav a:hover&quot; selector.</p>
+    <p>The global navigation allows the author to set a onstate for the current navigation items. So if the user is on the &quot;About&quot; page the &quot;About&quot; link is highlighted. To set the onstate for any global navigation item apply the &quot;.current&quot; class to the appropriate &lt;a&gt; tag. You may customize the onstate style by editing the &quot;.current&quot; class. </p>
+    <h2>Sub Navigation</h2>
+    <p>The <em>Parchment </em>template gives the author the ability to include sub  navigation items. The sub navigation appears in the right column of the template. Just like the global navigation, the sub navigation is a unordered list of text links. The &lt;ul&gt; tag which contains the sub navigation items has the &quot;.side-nav&quot; class applied to it. You can add, modify or remove list item links in order to suit your site map.</p>
+    <p>The upstate and rollover state for the sub navigation are controlled by CSS. To customize the sub navigation link's upstate edit the &quot;ul.side-nav li a&quot; selector. To customize the rollover state edit the &quot;ul.side-nav li a:hover&quot; selector.</p>
+    <h2>Headers</h2>
+    <p>In order to keep you site semantically correct it's best to use the header elements of HTML. I always tend to use the &lt;H1&gt; tag only once for the business name. All other titles are wrapped in  the &lt;H2&gt;, &lt;H3&gt;, or  &lt;H4&gt; tag. You may customize any style applied to the Header elements by simply editing the proper selector (i.e. h2, h3, or h4).</p>
+    <p>The &quot;.box-title&quot; class can be applied to any &lt;H3&gt; or &lt;H4&gt; tag to give the title a underlining 3 pixel rule. The &quot;.box-title&quot; class effect can be seen on the right column titles of the interior template page. The &quot;.box-title&quot; class is also applied to the three subtitles found on the home page.</p>
+    <h2>General Elements</h2>
+    <blockquote>
+      <h3>Raised Corner Effect</h3>
+      <p>Content groups such as the ones found on the right column of the interior page and home page have a parchment corner that appears to be raised with a shadow. To get that effect apply the &quot;.page-flip&quot; class to containing  block element such as a DIV.</p>
+      <h3>List Items</h3>
+      <p>The list items in the main body column are indented with a dashed line on the bottom of each item. If you wish to customize this effect edit the &quot;.main-content ul li&quot; selector for unordered lists or the &quot;.main-content ol li&quot; selector for ordered lists.      </p>
+      <p>Apply the &quot;.line&quot; class to a &lt;ul&gt; tag if you do not want the list items to be intended and you would like a 1 pixel line under each item. </p>
+      <h3>Images</h3>
+      <p>There are three classes for images. All three classes apply a 5 pixel white border and set the proper margins to the image. Apply the &quot;.left&quot; class to a &lt;IMG&gt; tag to place the image to the left side of the containing block.  Apply the &quot;.right&quot; class to a &lt;IMG&gt; tag to place the image to the right side of the containing block. Finally, apply the &quot;.side&quot; class to a &lt;IMG&gt; tag if you only want the image to have the border and a bottom margin.  The &quot;.side&quot; class is really only needed for images that you place in the side column of the interior page.</p>
+      <h3>Text Links</h3>
+      <p>The global text link style is bold and blue. If no link style is applied otherwise all text links are bold  and blue. You can customize the global link style by editing the &quot;a&quot; selector. To customize the global text link rollover effect edit the &quot;a:hover&quot; selector.</p>
+      <p>All text links found in the side bar, found on the right hand side of the interior pages, are bold and green. The bold effect is from the global text link style cascading. To customize the side bar text links edit the &quot;.side-content a&quot; selector. To customize the side bar text link rollover effect edit &quot;.side-content a:hover&quot;.</p>
+    </blockquote>
+    <h2>Summary</h2>
+    <p>There are plenty of ways to customize the <em>Parchment</em> HTML template to better fit your needs. Most of the methods have been explained here, but there is   always more that you can do. Use your creativity and have fun building your web project.</p>
+    <p> If you need further assistance with the <em>Parchment</em> HTML template please feel free to contact me, Chris Falkestein. My email address is <a href="mailto:chris@thewebprojects.com?subject=Parchment HTML Template Help">Chris@theWebProjects.com</a>.</p>
+  </div>
+</div>
+</body>
+</html>

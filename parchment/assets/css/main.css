@@ -1,0 +1,392 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .75em;
+	line-height: 1.5em;
+	color: #797266;
+	background-color: #797266;
+}
+img.left, img.right, img.side {
+	border: 5px solid #FFFFFF;
+	margin-bottom: 15px;
+}
+img.left {
+	float: left;
+	margin-right: 15px;
+}
+img.right {
+	margin-left: 15px;
+}
+
+
+
+a{ 	/* this is the global style. 
+	this style effetcs all links, but don't be afraid to change it as you see fit.  
+	just keep in mind that your updates will cascade to the other links */
+	text-decoration: none;
+	font-weight: bold;
+	color: #006579;
+}
+a:hover{
+	text-decoration: underline;
+	color: #BA3600;
+}
+
+p{
+	margin: 0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 1.25em;
+	padding-left: 0px;
+}
+h1, h2, h3, h4, h5 {
+	font-size: 1em;
+	line-height: 1em;
+	color: #352f24;
+	margin: 0px;
+	padding: 0px;
+	font-weight: bold;
+}
+strong {
+	color: #352f24;
+}
+
+h2{
+	font-size: 2em;
+	padding-bottom: 20px;
+}
+h3{
+	font-size: 1.5em;
+	padding-bottom: .5em;
+}
+h4{
+	font-size: 1.083em;
+	color: #605A51;
+}
+h3.box-title, h4.box-title {
+	margin-bottom: 15px;
+	padding-bottom: 10px;
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	border-bottom-color: #dddac3;
+}
+.large-text {
+	font-size: 1.5em;
+	font-weight: normal;
+	line-height: 1.167em;
+	color: #605A51;
+}
+
+.larger-text {
+	font-size: 1.667em;
+}
+
+
+.hide{
+	display: none;
+}
+.clear{
+	clear: both;
+	font-size: 0px;
+	line-height: 0px;
+	height: 0px;
+}
+.container-top, .container-body, .container-foot {
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.padding{
+	padding-right: 65px;
+	padding-left: 65px;
+}
+.container-top{
+	background-image: url(../images/header-bg.jpg);
+	background-repeat: no-repeat;
+	height: 210px;
+}
+.container-top .padding{
+	padding-top: 75px;
+}
+.container-top .logo{
+	background-image: url(../images/logo.gif);
+	background-repeat: no-repeat;
+	float: left;
+	height: 90px;
+	width: 440px;
+}
+.global-nav{
+	float: left;
+	width: 370px;
+	margin-left: 20px;
+}
+.global-nav ul{
+	padding: 0px;
+	list-style-type: none;
+	float: right;
+	margin-top: 20px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+.global-nav ul li{
+	display: inline;
+}
+.global-nav a{
+	font-weight: bold;
+	text-transform: uppercase;
+	display: block;
+	padding: 5px;
+	float: left;
+	color: #423b2d;
+	text-decoration: none;
+	margin-left: 10px;
+}
+.global-nav a:hover{
+	color: #ba3600;
+}
+.global-nav a.current{
+	background-color: #ba3600;
+	color: #FFFFFF;
+}
+
+/* start home page slideshow css */
+
+#slideshow {
+	position:relative;
+	height:220px;
+	margin-left: 35px;
+	margin-bottom: 30px;
+}
+
+#slideshow img {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:8;
+}
+
+#slideshow img.active {
+    z-index:10;
+}
+
+#slideshow img.last-active {
+    z-index:9;
+}
+
+/* end home page slideshow css */
+
+
+.container-body{
+	background-image: url(../images/page-body-bg.jpg);
+	background-repeat: repeat-y;
+}
+.home-column {
+	float: left;
+	width: 276px;
+}
+
+.container-body .main-content{
+	float: left;
+	width: 560px;
+}
+.container-body .side-content{
+	float: left;
+	width: 240px;
+	margin-left: 30px;
+}
+.side-content a {
+	font-weight: normal;
+}
+
+.page-flip  { /* apply the "page-flip" class to a DIV to get the raised bottom corner effect. */
+	background-image: url(../images/sidebar-page-flip.gif);
+	background-repeat: no-repeat;
+	background-position: 0px bottom;
+	padding-bottom: 50px;
+	padding-right: 20px;
+	padding-left: 25px;
+	margin-bottom: 20px;
+}
+.page-flip-home {
+	margin-bottom: 0px;
+}
+ul.line, ul.side-nav, ul.foot {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+ul.line    li  { /* apply the "line" class to a UL to remove the indent from your lists and add a line under each item */
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #dddac3;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+.main-content ul, .main-content ol {
+	margin-top: 0px;
+	margin-bottom: 1.75em;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-right: 2em;
+	padding-left: 2em;
+	margin-right: 2em;
+	margin-left: 2em;
+}
+
+.main-content ul li, .main-content ol li {
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #DDDAC3;
+	padding-bottom: .75em;
+	margin-bottom: .75em;
+}
+
+.news-date {
+	float: left;
+	text-align: center;
+	color: #352f24;
+	display: block;
+	width: 40px;
+}
+.news-date .month {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.news-date  .day {
+	font-size: 1.75em;
+	font-weight: bold;
+	color: #BA3600;
+}
+.news-date .year {
+	font-size: .9em;
+}
+.news-item {
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #DDDAC3;
+	float: left;
+	margin-left: 12px;
+	padding-left: 12px;
+	width: 165px;
+}
+
+ul.resources li, ul.side-nav li{
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #DDDAC3;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+}
+ul.side-nav li{
+	margin-bottom: 6px;
+	padding-bottom: 6px;
+}
+
+
+
+ul.side-nav li a{ /* this is the sidebar sub navigation link style. */
+	color: #BA3600;
+	display: block;
+	background-image: url(../images/sidebar-nav-bullet.gif);
+	background-repeat: no-repeat;
+	background-position: 0em .5em;
+	padding-left: 12px;
+	font-weight: bold;
+}
+ul.side-nav li a:hover{
+	color: #006579;
+	text-decoration: none;
+}
+ul.line li.last ,ul.side-nav li.last{
+	border-bottom-style: none;
+}
+
+.container-foot{
+	background-image: url(../images/page-foot-bg.jpg);
+	background-repeat: no-repeat;
+	color: #423b2d;
+	font-size: .917em;
+	line-height: 1.4em;
+}
+.container-foot h3{
+	padding-bottom: .25em;
+	font-size: 1.75em;
+}
+.container-foot a{ /* this is style that controls all footer links. */
+	color: #352F24;
+}
+ul.foot{
+	padding-bottom: .5em;
+}
+ul.foot li{
+	display: inline;
+	margin-right: 15px;
+}
+
+.container-foot p{
+	padding-bottom: .5em;
+}
+
+.container-foot .padding {
+	padding-top: 92px;
+	padding-bottom: 20px;
+}
+.container-foot .info {
+	float: left;
+	width: 200px;
+}
+.container-foot .links{
+	width: 610px;
+	margin-left: 20px;
+	float: left;
+}
+form.contact {
+	margin: 0px;
+	padding: 0px;
+}
+form.contact fieldset {
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+
+form.contact div.clear {
+	border-bottom-width: 1px;
+	border-bottom-style: none;
+	border-bottom-color: #DDDAC3;
+	padding-bottom: 3px;
+}
+
+form.contact  label {
+	text-align: right;
+	float: left;
+	width: 125px;
+}
+form.contact    .element      {
+	margin-left: 5px;
+	border: 1px solid #DDDAC3;
+	float: left;
+	width: 200px;
+	color: #797266;
+	padding: 5px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+form.contact  .large {
+	width: 300px;
+}
+form.contact .button {
+	padding: 5px;
+	margin-left: 130px;
+	float: left;
+}
+.alert {
+	font-size: .9em;
+	font-style: italic;
+	color: #BA3600;
+}

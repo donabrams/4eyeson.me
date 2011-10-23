@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  note: MyText
+  percent: 9.99
+
+two:
+  note: MyText
+  percent: 9.99
