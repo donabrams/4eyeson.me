@@ -1,14 +1,80 @@
 <!DOCTYPE html>
-<html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-  <title>Mvp</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Enter keywords here." />
+<meta name="description" content="Enter brief description here." />
+
+<title>BusinessName: About</title>
+
+<%= stylesheet_link_tag    "application" %>
+<%= javascript_include_tag "application" %>
+<%= csrf_meta_tags %>
+<link href="/assets/main.css" rel="stylesheet" type="text/css" />
+
 </head>
+
 <body>
 
-<%= yield %>
+<div class="container-top">
+<div class="padding">
+    
+    <div class="logo">
+    	<h1 class="hide">BusinessName</h1>
+    </div>
+    
+    <div class="global-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="2.html" class="current">About</a></li>
+            <li><a href="3.html">Services</a></li>
+            <li><a href="3.html">Contact</a></li>
+        </ul>
+    </div>
+</div>
+</div>
+
+<!--BODY REGION-->
+<div class="container-body">
+<div class="padding">
+  
+    <h2>About (H2)</h2>
+    
+    <!--main content-->
+    <div class="main-content">
+      <%= yield %>
+    </div>
+    <div class="clear"></div>
+    
+</div>
+</div>
+
+<!--FOOT REGION-->
+<div class="container-foot">
+  <div class="padding">
+    <div class="info">
+      <h3>BusinessName</h3>
+      <p> 589 W 1st Street<br />
+        Boiling Springs, PA 17007</p>
+      <strong>Phone:</strong> (888) 555-5555<br />
+      <strong>Fax:</strong> (888) 555-5555</div>
+    <div class="links">
+      <ul class="foot">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="2.html">About</a></li>
+        <li><a href="2.html">Services</a></li>
+        <li><a href="4.html">Contact</a></li>
+        <li><a href="http://validator.w3.org/check/referer" title="Check the validity of this pages’s XHTML">XHTML</a></li>
+        <li><a href="http://jigsaw.w3.org/css-validator/check/referer" title="Check the validity of this page’s CSS" >CSS</a></li>
+        <li><a href="http://www.thewebprojects.com" title="Web Design by Chris Falkenstein at theWebProjects.com">tWP</a></li>
+      </ul>
+      &copy; 2010 BusinessName. All rights reserved. </div>
+    <div class="clear"></div>
+  </div>
+</div>
 
 </body>
-</html>
+</html>
