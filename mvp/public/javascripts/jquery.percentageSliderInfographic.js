@@ -4,9 +4,7 @@ $(function() {
         context.drawImage(image, position.x, position.y);
     };
     $.fn.percentageSliderInfographic = function() {
-              console.log("started:" + this.length);
         $.each(this, function(i, domNode) {
-              console.log("doing background");
             var $bgImg = $($(".background", domNode)[0]);
             //create the canvas and size it according
             var canvas = document.createElement("canvas");
@@ -24,7 +22,6 @@ $(function() {
             };
             //draw the sliders on the canvas
             dfd.done(function() {
-              console.log("doing percent");
                 $(".percent").each(function(i, percentNode) {
                   var node = $(percentNode);
                     //for each percent
@@ -45,8 +42,6 @@ $(function() {
             });
             dfd.done(function() {
                 $(domNode).after(canvas).hide();
-                
-              console.log("write and hide");
             });
         });
     };

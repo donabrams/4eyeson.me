@@ -132,7 +132,7 @@ h3.box-title, h4.box-title {
   background-color:#fff;
 }
 .container-top .logo{
-	background-image: url(logo.png);
+	background-image: url( "/images/logo.png" );
 	background-repeat: no-repeat;
 	float: left;
 	height: 135px;
@@ -322,7 +322,7 @@ ul.side-nav li{
 ul.side-nav li a{ /* this is the sidebar sub navigation link style. */
 	color: #C44D58;
 	display: block;
-	background-image: url(sidebar-nav-bullet.gif);
+	background-image: url( "/images/sidebar-nav-bullet.gif" );
 	background-repeat: no-repeat;
 	background-position: 0em .5em;
 	padding-left: 12px;

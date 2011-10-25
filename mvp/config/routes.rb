@@ -1,4 +1,7 @@
 Mvp::Application.routes.draw do
+  root :to => 'welcome#index'
+  match 'index.html' => 'welcome#index'
+  
   resources :notes
 
   resources :columns
@@ -9,7 +12,8 @@ Mvp::Application.routes.draw do
   # first created -> highest priority.
 
   # Sample of regular route:
-  #   match 'products/:id' => 'catalog#view'
+  #   match 'products/:i
+  # d' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:
@@ -41,7 +45,8 @@ Mvp::Application.routes.draw do
   #   resources :products do
   #     resources :comments
   #     resources :sales do
-  #       get 'recent', :on => :collection
+  #       
+  #     get 'recent', :on => :collection
   #     end
   #   end
 
