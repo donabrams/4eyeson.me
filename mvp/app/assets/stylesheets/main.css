@@ -2,7 +2,7 @@
 Color bank
 dark blue:  #556270
 light blue: #4ECDC4
-green:		#C7F464
+green:		#7E6058
 light pink	#FF6B6B
 dark pink	#C44D58
 */
@@ -15,7 +15,7 @@ body {
 	font-size: .75em;
 	line-height: 1.5em;
 	color: #797266;
-	background-color: #C7F464;
+	background-color: #7E6058;
 }
 img.left, img.right, img.side {
 	border: 5px solid #FFFFFF;
@@ -119,7 +119,7 @@ h3.box-title, h4.box-title {
 
 }
 .container-top{
-	background-color:#eee;
+	background-color:#fff;
 
 	height: 210px;
 	width:890px;
@@ -129,6 +129,7 @@ h3.box-title, h4.box-title {
 	padding-top: 75px;
 	padding-left:65px;
 	padding-right:65px;
+  background-color:#fff;
 }
 .container-top .logo{
 	background-image: url(logo.png);
@@ -202,7 +203,7 @@ h3.box-title, h4.box-title {
 
 
 .container-body{
-	background-color:#C7F464;
+	background-color:#7E6058;
 	background-repeat: repeat-y;
 }
 
@@ -212,7 +213,7 @@ h3.box-title, h4.box-title {
 
 .home-column {
 	float: left;
-	width: 295px;
+	width: 290px;
 }
 
 .container-body .main-content{
@@ -338,7 +339,7 @@ ul.line li.last ,ul.side-nav li.last{
 .container-foot{
 
     background-repeat: no-repeat;
-    border-top: 1px dashed #C7F464;
+    border-top: 1px dashed #7E6058;
     color: #423B2D;
     font-size: 0.917em;
     line-height: 1.4em;
@@ -430,4 +431,9 @@ form.contact .button {
 	font-size: .9em;
 	font-style: italic;
 	color: #C44D58;
+}
+
+h1.percent {
+  font-size: 35px;
+  font-style: bold;
 }

@@ -11,12 +11,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111022201951) do
+ActiveRecord::Schema.define(:version => 20111023145650) do
 
   create_table "cells", :force => true do |t|
     t.integer  "row"
     t.integer  "col"
     t.string   "contents"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "columns", :force => true do |t|
+    t.text     "note"
+    t.decimal  "percent"
+    t.integer  "student_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "notes", :force => true do |t|
+    t.text     "note_text"
+    t.integer  "student_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

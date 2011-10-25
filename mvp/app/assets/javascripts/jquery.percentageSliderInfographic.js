@@ -1,15 +1,12 @@
-<html>
-<head>
-<title>C"MON</title>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-<script type="text/javascript">
 $(function() {
     var drawImageOnCanvas = function(image, canvas, position) {
         var context = canvas.getContext("2d");
         context.drawImage(image, position.x, position.y);
     };
     $.fn.percentageSliderInfographic = function() {
+              console.log("started:" + this.length);
         $.each(this, function(i, domNode) {
+              console.log("doing background");
             var $bgImg = $($(".background", domNode)[0]);
             //create the canvas and size it according
             var canvas = document.createElement("canvas");
@@ -27,6 +24,7 @@ $(function() {
             };
             //draw the sliders on the canvas
             dfd.done(function() {
+              console.log("doing percent");
                 $(".percent").each(function(i, percentNode) {
                   var node = $(percentNode);
                     //for each percent
@@ -47,21 +45,9 @@ $(function() {
             });
             dfd.done(function() {
                 $(domNode).after(canvas).hide();
+                
+              console.log("write and hide");
             });
         });
     };
-    $("#rockBandInfographic").percentageSliderInfographic();
 });
-</script>
-</head>
-<body>
-  <div id="rockBandInfographic">
-    <img class="background" src="rock-band.png" width="600" height="600">
-    <img class="percent" data-percent="0" data-min-x="-10" data-min-y="390" data-max-x="55" data-max-y="140" src="mic.png"/>
-    <img class="percent" data-percent="0" data-min-x="100" data-min-y="390" data-max-x="126" data-max-y="140" src="mic.png"/>
-    <img class="percent" data-percent="0" data-min-x="200" data-min-y="390" data-max-x="205" data-max-y="140" src="mic.png"/>
-    <img class="percent" data-percent="0" data-min-x="305" data-min-y="390" data-max-x="280" data-max-y="140" src="mic.png"/>
-    <img class="percent" data-percent="0" data-min-x="420" data-min-y="390" data-max-x="355" data-max-y="140" src="mic.png"/>
-  </div>
-</body>
-</html>

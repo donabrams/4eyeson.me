@@ -129,6 +129,7 @@ GEM
     uglifier (1.0.4)
       execjs (>= 0.3.0)
       multi_json (>= 1.0.2)
+    will_paginate (3.0.2)
     zip (2.0.2)
 
 PLATFORMS
@@ -144,4 +145,5 @@ DEPENDENCIES
   sqlite3
   turn
   uglifier (>= 1.0.3)
+  will_paginate
   zip

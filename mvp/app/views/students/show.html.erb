@@ -1,24 +1,60 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Name:</b>
-  <%= @student.name %>
-</p>
-
-<p>
-  <b>Email:</b>
-  <%= @student.email %>
-</p>
-
-<p>
-  <b>Attachment URL:</b>
-  <%= @student.test.url %>
-</p>
-
-
-<script type="text/javascript">
-<%= @json %>
-</script>
-
-<%= link_to 'Edit', edit_student_path(@student) %> |
-<%= link_to 'Back', students_path %>
+<h2>Report</h2>
+<div class="main-content">
+  <p id="notice"><%= notice %></p>
+  
+  <p>
+    <b>Name:</b>
+    <%= @student.name %>
+  </p>
+  
+  <p>
+    <b>Parent email:</b>
+    <%= @student.email %>
+  </p>
+  
+  <script type="text/javascript">
+  $(function(){
+    var results = <%= @json %>;
+    var rbi = $("#rockBandInfographic");
+    $(".col1.percent", rbi).data("percent", results[1][1]);
+    $(".col2.percent", rbi).data("percent", results[1][2]);
+    $(".col3.percent", rbi).data("percent", results[1][3]);
+    $(".col4.percent", rbi).data("percent", results[1][4]);
+    $(".col5.percent", rbi).data("percent", results[1][5]);
+    $("h1.col1.percent").html(results[1][1]*100 + "%");
+    $("h1.col2.percent").html(results[1][2]*100 + "%");
+    $("h1.col3.percent").html(results[1][3]*100 + "%");
+    $("h1.col4.percent").html(results[1][4]*100 + "%");
+    $("h1.col5.percent").html(results[1][5]*100 + "%");
+    
+    var changeOnce = true;
+    $("#teacherComment").click(function(){
+      if (changeOnce) {
+        $(this).html(" ");
+        changeOnce = false;
+      }  
+    });
+    rbi.percentageSliderInfographic();
+  });
+  </script>
+  <div style="position:relative;height:700px;width:600px;">
+    <div id="rockBandInfographic">
+      <img class="background" src="/assets/rock-band.png" width="600px" height="700px">
+      <img class="col1 percent" data-percent="0" data-min-x="-10" data-min-y="390" data-max-x="55" data-max-y="140" src="/assets/mic.png"/>
+      <img class="col2 percent" data-percent="0" data-min-x="100" data-min-y="390" data-max-x="126" data-max-y="140" src="/assets/mic.png"/>
+      <img class="col3 percent" data-percent="0" data-min-x="200" data-min-y="390" data-max-x="205" data-max-y="140" src="/assets/mic.png"/>
+      <img class="col4 percent" data-percent="0" data-min-x="305" data-min-y="390" data-max-x="280" data-max-y="140" src="/assets/mic.png"/>
+      <img class="col5 percent" data-percent="0" data-min-x="420" data-min-y="390" data-max-x="355" data-max-y="140" src="/assets/mic.png"/>
+    </div>
+    <h1 class="col1 percent" style="position:absolute;left:9px;top:475px;"></h1>
+    <h1 class="col2 percent" style="position:absolute;left:123px;top:475px;"></h1>
+    <h1 class="col3 percent" style="position:absolute;left:215px;top:475px;"></h1>
+    <h1 class="col4 percent" style="position:absolute;left:323px;top:475px;"></h1>
+    <h1 class="col5 percent" style="position:absolute;left:420px;top:475px;"></h1>
+    <div contenteditable id="teacherComment" style="padding:5px;width:400px;height:47px;position:absolute;left:87px;top:530px;">Ms. Horn's action steps:</div>
+  </div>
+    
+    
+  <%= link_to 'Edit', edit_student_path(@student) %> |
+  <%= link_to 'Back', students_path %>
+</div>

@@ -9,6 +9,7 @@ gem 'sqlite3'
 gem 'paperclip'
 gem 'zip'
 gem 'roo'
+gem 'will_paginate'
 
 
 # Gems used only for assets and not required

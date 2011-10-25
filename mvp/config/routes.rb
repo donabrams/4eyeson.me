@@ -3,8 +3,6 @@ Mvp::Application.routes.draw do
 
   resources :columns
 
-  resources :cells
-
   resources :students
 
   # The priority is based upon order of creation:
